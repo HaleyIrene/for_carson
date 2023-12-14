@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        function validateLogin() {
+            var usernameInput = document.getElementById('username').value.toLowerCase();
+
+            // Check if the entered username is 'carson'
+            if (usernameInput === 'carson') {
+                // Redirect to the "I love you" page (replace 'iloveyou.html' with your actual page)
+                window.location.href = 'iloveyou.html';
+            } else {
+                alert('Invalid username. Please enter the correct name.');
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="login-container">
+        <form id="loginForm" onsubmit="validateLogin(); return false;">
+            <label for="username" class="login-text">Enter Name:</label>
+            <input type="text" id="username" name="username" required>
+            <button type="button" onclick="validateLogin()">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
